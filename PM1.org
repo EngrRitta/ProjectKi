@@ -1,0 +1,46 @@
+* Introduction
+** Document Purpose
+** Product Scope
+** Intended Audience and Document Overview
+** Defintions, Acronyms and Abbreviations
+** Document Convetions
+** References and Acknowledgments
+* Overall Description
+** Product Perspective
+** Product Functionality
+** Users and Characteristics
+- The primary intended user of this project is an engineer, drafter, technician,
+  or other member of a small technical team.
+- The most likely of these primary users would include mechanical, electrical,
+  process control and project engineers.
+- The tool is generally used to generate business and logistics documents, so the
+  secondary user is the recipient of the generated documentation.
+- The recipients of Bills of Materials is intended to include:
+  - Engineers and drafters responsible for reviewing the final parts lists
+    against project drawings.
+  - Project managers responsible for approving expenditures.
+  - Shipping and receiving staff to check-list project shelving.
+- The recipients of the Purchase Orders is expected to be:
+  - Internal purchasing agents and departments.
+  - External suppliers/vendors.
+- From the software's perspective, there is really only one user-type
+** Operating Environment
+** Design and Implementation Contraints
+** User Documentation
+** Assumptions and Dependencies
+* Specific Requirements
+** External Interface Requirements
+** User Interfaces
+** Hardware Interfaces
+** Software Interfaces
+** Communications Interfaces
+** Functional Requirements
+** Behavior Requirements
+*** Use Case View
+* Other Non-Functional Requirements
+** Performance Requirements
+** Safety And Security Requirements
+** Software Quality Attributes
+* Appendix A - Data Dictionary
+* Appendix B - Group Log
+* Optional Other Requirements
