@@ -1,18 +1,29 @@
 * Introduction
+
 ** Document Purpose
 ** Product Scope
 ** Intended Audience and Document Overview
 ** Defintions, Acronyms and Abbreviations
 ** Document Convetions
 ** References and Acknowledgments
+
 * Overall Description
+
 ** Product Perspective
 ** Product Functionality
 ** Users and Characteristics
 - The primary intended user of this project is an engineer, drafter, technician,
   or other member of a small technical team.
-- The most likely of these primary users would include mechanical, electrical,
-  process control and project engineers.
+- Most likely, these primary users would include mechanical, electrical, process
+  control and project engineers and their managers.
+- From the software's perspective, there is only one user-type, as there are no
+  functions of the software that need to be different from one user to the next.
+- In practice, different users may be responsible for different tasks in using
+  the software.
+  - For example, a management or accounting person may have the responsibility
+    of populating the vendor and supplier database tables, an electrical drafter
+    may then generate a Bill of Materials for their current project, and then a
+    purchasing manager may generate and distribute the Purchase Orders.
 - The tool is generally used to generate business and logistics documents, so the
   secondary user is the recipient of the generated documentation.
 - The recipients of Bills of Materials is intended to include:
@@ -23,12 +34,13 @@
 - The recipients of the Purchase Orders is expected to be:
   - Internal purchasing agents and departments.
   - External suppliers/vendors.
-- From the software's perspective, there is really only one user-type
 ** Operating Environment
 ** Design and Implementation Contraints
 ** User Documentation
 ** Assumptions and Dependencies
+
 * Specific Requirements
+
 ** External Interface Requirements
 ** User Interfaces
 ** Hardware Interfaces
@@ -37,10 +49,16 @@
 ** Functional Requirements
 ** Behavior Requirements
 *** Use Case View
+
 * Other Non-Functional Requirements
+
 ** Performance Requirements
 ** Safety And Security Requirements
 ** Software Quality Attributes
+
 * Appendix A - Data Dictionary
+
 * Appendix B - Group Log
+
 * Optional Other Requirements
+
