@@ -12,8 +12,9 @@
 ** Product Perspective
 ** Product Functionality
 ** Users and Characteristics
-- The primary intended user of this project is an engineer, drafter, technician,
-  or other member of a small technical team.
+- The primary intended user of ProjectKi is an engineer, drafter, technician, or
+  any other member of a small technical team managing the parts and pieces of an
+  engineering project.
 - Most likely, these primary users would include mechanical, electrical, process
   control and project engineers and their managers.
 - From the software's perspective, there is only one user-type, as there are no
@@ -35,6 +36,7 @@
   - Internal purchasing agents and departments.
   - External suppliers/vendors.
 ** Operating Environment
+- 
 ** Design and Implementation Contraints
 ** User Documentation
 ** Assumptions and Dependencies
