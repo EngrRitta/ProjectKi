@@ -36,7 +36,15 @@
   - Internal purchasing agents and departments.
   - External suppliers/vendors.
 ** Operating Environment
-- 
+- ProjectKi is intended to reside within a small internal company network as a
+  tool which is quickly accessible to employees onsite in the same subnet.
+- Much of the engineering and manufacturing world is dominated by Microsoft, so
+  it is most likely that this tool would be hosted on a network attached Windows box:
+  - The operating system should be Microsoft Server 2003 or higher.
+  - At least Dual Core 3.6 MHz CPU.
+  - At least 1 gigabytes of storage.
+    - Microsoft Access is limited to a 1 gigabyte database size and ProjectKi is a
+      potential Access alternative, so requires a 1 gigabyte minimum to match.
 ** Design and Implementation Contraints
 ** User Documentation
 ** Assumptions and Dependencies
