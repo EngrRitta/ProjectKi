@@ -26,12 +26,12 @@
     purchasing manager may generate and distribute the Purchase Orders.
 - The tool is generally used to generate business and logistics documents, so the
   secondary user is the recipient of the generated documentation.
-- The recipients of Bills of Materials is intended to include:
+- The recipients of Bills of Materials are intended to include:
   - Engineers and drafters responsible for reviewing the final parts lists
     against project drawings.
   - Project managers responsible for approving expenditures.
   - Shipping and receiving staff to check-list project shelving.
-- The recipients of the Purchase Orders is expected to be:
+- The recipients of the Purchase Orders are expected to be:
   - Internal purchasing agents and departments.
   - External suppliers/vendors.
 ** Operating Environment
