@@ -3,8 +3,8 @@
 ** Document Purpose
 ** Product Scope
 ** Intended Audience and Document Overview
-** Defintions, Acronyms and Abbreviations
-** Document Convetions
+** Definitions, Acronyms and Abbreviations
+** Document Conventions
 ** References and Acknowledgments
 
 * Overall Description
@@ -42,10 +42,29 @@
   it is most likely that this tool would be hosted on a network attached Windows box:
   - The operating system should be Microsoft Server 2003 or higher.
   - At least Dual Core 3.6 MHz CPU.
-  - At least 1 gigabytes of storage.
+  - At least 1 gigabyte of storage.
     - Microsoft Access is limited to a 1 gigabyte database size and ProjectKi is a
       potential Access alternative, so requires a 1 gigabyte minimum to match.
-** Design and Implementation Contraints
+  - Local installation of Microsoft SQL Server
+** Design and Implementation Constraints
+*** Security
+- Once populated, the ProjectKi database will likely contain sensitive business
+  information, ranging from privately negotiated vendor prices to engineering
+  designs protected by Non-Disclosure Agreements.
+- For the purposes of demo, ProjectKi will be hosted on a public domain website,
+  but end-user installation of the software is expected to be restricted to an
+  existing local subnet whose security is already maintained by an administrator
+  and hidden behind firewall.
+- The software itself does not provide additional security measures.
+*** Speed
+- ProjectKi would ideally be a drop-in replacement for similar custom Microsoft
+  Access applications, and because Access is just a local application and
+  database, it feels very snappy relative to internet webpages.
+- Local hosting of the ProjectKi database server will allow for fast interaction.
+*** Lean Design
+- ProjectKi consists of only a handful of pages, but each page should have links
+  to every other page, and those links should be supplemented with a paired
+  shortcut key.
 ** User Documentation
 ** Assumptions and Dependencies
 
