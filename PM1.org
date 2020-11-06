@@ -65,7 +65,20 @@
 - ProjectKi consists of only a handful of pages, but each page should have links
   to every other page, and those links should be supplemented with a paired
   shortcut key.
+*** Printable Deliverables
+- Generated PO's and BOM's must format to print nicely on 8.5" by 11" standard
+  printer paper as well as 11" by 17" drawing paper.
 ** User Documentation
+- The user documentation for ProjectKi consists of three parts:
+  - The primary documentation will be the landing page of the website, which
+    will have an embedded mini-guide on how to use the system.
+  - The secondary documentation will be tooltips populated for every pushbutton
+    and static page element.
+  - The third and most detailed documentation will be the software user manual.
+    This manual will provide screenshots of each page and an enumerated
+    description pointing to each element on that page. The manual will also
+    detail the valid values for each user entry and a description for each
+    system error that can occur.
 ** Assumptions and Dependencies
 
 * Specific Requirements
