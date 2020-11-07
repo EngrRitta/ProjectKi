@@ -80,14 +80,51 @@
     detail the valid values for each user entry and a description for each
     system error that can occur.
 ** Assumptions and Dependencies
-
+*** Assumptions
+- Each BOM can only select one price per unique part, even with multiple of the
+  same part.
+- Each unique part is made by only one manufacturer.
+- Manufacturers do not duplicate their own part numbers.
+- Each supplier has only one relevant contact and address.
+- Each purchase order is generated from only one BOM.
+- Each purchase order is for only one supplier.
+- Each supplier requires one purchase order per BOM.
+*** Dependencies
+- Users have web-browsers capable of interacting with javascript, html, and css.
+- Microsoft SQL Server will host a database to interact with.
 * Specific Requirements
 
 ** External Interface Requirements
-** User Interfaces
-** Hardware Interfaces
-** Software Interfaces
-** Communications Interfaces
+*** User Interfaces
+    The user interface for ProjectKi consists of four pages. At the top of each
+    of these pages will be navigation buttons to the other three.
+**** Landing Page
+     The landing page will present a minitutorial in a central window with
+     buttons on either side for scrolling through the tutorial graphics.
+**** Suppliers Entry
+     The suppliers entry page will be split into two halves. The bottom half
+     will display a sortable list of existing supplier entries. The top half
+     will display the currently selected supplier, or an empty entry, with the
+     following editable fields either populated or blank:
+     - Supplier ID
+     - Supplier Name
+     - Supplier Abbreviation
+     - Account Number
+     - Contact Name
+     - Contact Title
+     - Address
+     - City
+     - State
+     - Postal Code
+     - Phone Number
+     - Notes
+     Below the editable fields, there will be pushbuttons for Accepting,
+     Cancelling, Previous Entry, Next Entry, and New Entry.
+**** Parts Entry
+**** Project Page
+*** Hardware Interfaces
+*** Software Interfaces
+*** Communications Interfaces
 ** Functional Requirements
 ** Behavior Requirements
 *** Use Case View
