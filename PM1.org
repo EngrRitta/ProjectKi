@@ -102,8 +102,7 @@
      The landing page will present a minitutorial in a central window with
      buttons on either side for scrolling through the tutorial graphics.
 **** Suppliers Entry
-     The suppliers entry page will be split into two halves. The bottom half
-     will display a sortable list of existing supplier entries. The top half
+     The suppliers entry page will be split into two halves. The top half
      will display the currently selected supplier, or an empty entry, with the
      following editable fields either populated or blank:
      - Supplier ID
@@ -119,9 +118,60 @@
      - Phone Number
      - Notes
      Below the editable fields, there will be pushbuttons for Accepting,
-     Cancelling, Previous Entry, Next Entry, and New Entry.
+     Cancelling, Previous Entry, Next Entry, and New Entry. Lastly, the bottom
+     half of the page will display a sortable tabulated list of existing
+     supplier entries which can be selected from. When an entry is selected, it
+     is pulled up into the top half of the screen for editing.
 **** Parts Entry
+     The parts entry page will be very similar to the suppliers entry page. The
+     top half will display the currently selected part, or an empty entry. For
+     each part, the editable fields are:
+     - Part ID
+     - Part Number
+     - Description
+     - Manufacturer
+     - Supplier and Supplier Unit Price
+     Each part can have multiple suppliers, so additional Supplier and Price
+     fields are generated as needed. Again below the editable fields there will
+     be pushbuttons for Accepting, Cancelling, Previous Entry, Next Entry, and
+     New Entry. The bottome half will display a sortable tabulated list of
+     existing part entries, which can also be selected from for editing.
 **** Project Page
+     The project page is where parts are collected into a Bill of Materials. The
+     page initially starts blank with a prompt and buttons for either selecting
+     an exisiting BOM project or starting a new one. After making a selection,
+     either an existing BOM is populated on screen or a blank one is started.
+     Once a project is open, the page will have three main sections. At the top
+     section are editable data fields that apply to the project as a whole:
+     - BOM ID
+     - Job Number
+     - Date
+     - Customer Name
+     - Project Name
+     - BOM Description
+     Also in the top section will be two pushbuttons, one for generating a BOM
+     document and one for generating a Purchase Order document.
+
+     The second section of the project page is an interactive area for adding
+     parts to the BOM. The first field is a searchable drop-down selection from
+     the parts list, ordered by manufacturer and then by part number. After
+     selecting a part, the second field will show a drop-down selection of
+     possible suppliers for that part. After selecting both the part number and
+     then supplier, a final field will display a quantity to add, next to a
+     pushbutton to accept the entry.
+
+     The third section of the project page is a sortable list of all parts
+     already added to the BOM. Next to each part is a button for deleting the
+     part and a button for editing the part, which will cause its details to
+     automatically populate the second page section for adding parts. Each part
+     entry on the BOM page will show its associated:
+     - Part Number
+     - Part Description
+     - Manufacturer
+     - Supplier
+     - Quantity
+     - Unit Price
+     - Line Total
 *** Hardware Interfaces
 *** Software Interfaces
 *** Communications Interfaces
