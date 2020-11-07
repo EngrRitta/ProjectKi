@@ -173,8 +173,23 @@
      - Unit Price
      - Line Total
 *** Hardware Interfaces
+    The anticipated hardware for using ProjectKi is just a basic monitor,
+    keyboard, and mouse peripheral setup on any website-capable computer. Even
+    though many other devices including cell phones and tablets can access an
+    internet browser to reach the ProjectKi webpage, the data-entry nature of
+    ProjectKi strongly suggests using a keyboard. A separate mobile-ready
+    webpage will not be created. The ProjectKi website application and database
+    will be on the same network as user-accessible computers.
 *** Software Interfaces
+    The ProjectKi program will need to interface with a database for storing
+    project data. Interaction with the database will be with SQL commands,
+    specifically transact-SQL for Microsoft SQL Server. Web-browsers used to
+    access ProjectKi will probably be limited to Windows installations of either
+    Edge, Chrome, or Firefox.
 *** Communications Interfaces
+    Because ProjectKi is intented to be contained within a trusted network,
+    basic Ethernet/IP connectivity over HTTP to a static IP address should
+    suffice.
 ** Functional Requirements
 ** Behavior Requirements
 *** Use Case View
