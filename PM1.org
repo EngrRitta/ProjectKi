@@ -47,27 +47,15 @@
       potential Access alternative, so requires a 1 gigabyte minimum to match.
   - Local installation of Microsoft SQL Server
 ** Design and Implementation Constraints
-*** Security
-- Once populated, the ProjectKi database will likely contain sensitive business
-  information, ranging from privately negotiated vendor prices to engineering
-  designs protected by Non-Disclosure Agreements.
-- For the purposes of demo, ProjectKi will be hosted on a public domain website,
-  but end-user installation of the software is expected to be restricted to an
-  existing local subnet whose security is already maintained by an administrator
-  and hidden behind firewall.
-- The software itself does not provide additional security measures.
-*** Speed
-- ProjectKi would ideally be a drop-in replacement for similar custom Microsoft
-  Access applications, and because Access is just a local application and
-  database, it feels very snappy relative to internet webpages.
-- Local hosting of the ProjectKi database server will allow for fast interaction.
-*** Lean Design
-- ProjectKi consists of only a handful of pages, but each page should have links
-  to every other page, and those links should be supplemented with a paired
-  shortcut key.
-*** Printable Deliverables
-- Generated PO's and BOM's must format to print nicely on 8.5" by 11" standard
-  printer paper as well as 11" by 17" drawing paper.
+*** Developer Inexperience
+    The largest constraint on this project is the general inexperience of the
+    development team.
+*** Time Limitation
+    The second largest constraint on the project is designing to fit development
+    time within the later half of one semester.
+*** Programming Language Constraint
+    The class project requires ProjectKi to be a website built on HTML, CSS, and
+    JavaScript.
 ** User Documentation
 - The user documentation for ProjectKi consists of three parts:
   - The primary documentation will be the landing page of the website, which
@@ -197,8 +185,39 @@
 * Other Non-Functional Requirements
 
 ** Performance Requirements
+- ProjectKi would ideally be a drop-in replacement for similar custom Microsoft
+  Access applications, and because Access is just a local application and
+  database, it feels very snappy relative to internet webpages.
+- Local hosting of the ProjectKi database server will allow for nearly-as-fast
+  interaction.
 ** Safety And Security Requirements
+*** Safety
+- ProjectKi does not carry implications for possible loss, damage, or harm.
+- However, it would be best administrative practice to automatically save a backup of the
+  database every work day and save a copy of any issued BOMs and POs in order to
+  maintain a record.
+*** Security
+- Once populated, the ProjectKi database will likely contain sensitive business
+  information, ranging from privately negotiated vendor prices to engineering
+  designs protected by Non-Disclosure Agreements.
+- For the purposes of demo, ProjectKi will be hosted on a public domain website,
+  but end-user installation of the software is expected to be restricted to an
+  existing local subnet whose security is already maintained by an administrator
+  and hidden behind firewall.
+- The software itself does not provide additional security measures.
 ** Software Quality Attributes
+*** Lean Design
+- ProjectKi consists of only a handful of pages, but each page should have links
+  to every other page, and those links should be supplemented with a paired
+  shortcut key.
+*** Flexible Quantities and Prices
+- All quantities fields need to able to handle fractional amounts (for example 3.25 is
+  a valid number to specify quantity of 10' cable lengths)
+- All prices fields need to be able to handle fractional pennies (for example
+  $0.015 is a valid price for individual terminal separators)
+*** Printable Deliverables
+- Generated PO's and BOM's must format to print nicely on 8.5" by 11" standard
+  printer paper as well as 11" by 17" drawing paper.
 
 * Appendix A - Data Dictionary
 
