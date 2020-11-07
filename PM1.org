@@ -141,6 +141,22 @@ ProjectKi consists of only a handful of pages, but each page should have links t
 
 * Appendix A - Data Dictionary
 
+SRS - Software Requirement Specification, formal name for this document.
+Part - Any uniquely identifiable material defined by a part number, description, and manufacturer.
+BOM - Bill of Materials, a list of all materials (parts) needed to manufacture an engineering product.
+PO - Purchase Order, an official document communicating a buyer's requested materials, quantities, and negotiated prices to a supplier.
+Job - An umbrella term for any task or project that has a need for BOMs and POs.
+Supplier - An organization from which materials can be bought.
+Manufacturer - An organization that creates original materials to be distributed by suppliers.
+SQL - Structured Query Language, a programming language for interacting with relational databases.
+Microsoft Access - A tool used to create business applications similar to ProjectKi.
+Microsoft Windows - A family of operating systems commonly used in engineering-field business.
+GB - Gigabyte, a measurement of storage space, equivalent to 1,000,000,000 bytes.
+MZH - Megahertz, a measurement of the CPU clock frequency
+CPU - Central Processor Unit, performs the calculations used by a computer program.
+Unit Price - The cost of a single one material.
+Line Total - The amount of money found by multiplying an item's unit price by its requested quantity.
+
 * Appendix B - Group Log
 
 * Optional Other Requirements
