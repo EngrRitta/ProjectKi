@@ -3,8 +3,8 @@
 ** Document Purpose
 ** Product Scope
 ** Intended Audience and Document Overview
-** Defintions, Acronyms and Abbreviations
-** Document Convetions
+** Definitions, Acronyms and Abbreviations
+** Document Conventions
 ** References and Acknowledgments
 
 * Overall Description
@@ -12,50 +12,107 @@
 ** Product Perspective
 ** Product Functionality
 ** Users and Characteristics
-- The primary intended user of ProjectKi is an engineer, drafter, technician, or
-  any other member of a small technical team managing the parts and pieces of an
-  engineering project.
-- Most likely, these primary users would include mechanical, electrical, process
-  control and project engineers and their managers.
-- From the software's perspective, there is only one user-type, as there are no
-  functions of the software that need to be different from one user to the next.
-- In practice, different users may be responsible for different tasks in using
-  the software.
-  - For example, a management or accounting person may have the responsibility
-    of populating the vendor and supplier database tables, an electrical drafter
-    may then generate a Bill of Materials for their current project, and then a
-    purchasing manager may generate and distribute the Purchase Orders.
-- The tool is generally used to generate business and logistics documents, so the
-  secondary user is the recipient of the generated documentation.
+- The primary intended user of ProjectKi is an engineer, drafter, technician, or any other member of a small technical team managing the parts and pieces of an engineering project.
+- Most likely, these primary users would include mechanical, electrical, process control and project engineers and their managers.
+- From the software's perspective, there is only one user-type, as there are no functions of the software that need to be different from one user to the next.
+- In practice, different users may be responsible for different tasks in using the software.
+  - For example, a management or accounting person may have the responsibility of populating the vendor and supplier database tables, an electrical drafter may then generate a Bill of Materials for their current project, and then a purchasing manager may generate and distribute the Purchase Orders.
+- The tool is generally used to generate business and logistics documents, so the secondary user is the recipient of the generated documentation.
 - The recipients of Bills of Materials are intended to include:
-  - Engineers and drafters responsible for reviewing the final parts lists
-    against project drawings.
+  - Engineers and drafters responsible for reviewing the final parts lists against project drawings.
   - Project managers responsible for approving expenditures.
   - Shipping and receiving staff to check-list project shelving.
 - The recipients of the Purchase Orders are expected to be:
   - Internal purchasing agents and departments.
   - External suppliers/vendors.
 ** Operating Environment
-- ProjectKi is intended to reside within a small internal company network as a
-  tool which is quickly accessible to employees onsite in the same subnet.
-- Much of the engineering and manufacturing world is dominated by Microsoft, so
-  it is most likely that this tool would be hosted on a network attached Windows box:
+- ProjectKi is intended to reside within a small internal company network as a tool which is quickly accessible to employees onsite in the same subnet.
+- Much of the engineering and manufacturing world is dominated by Microsoft, so it is most likely that this tool would be hosted on a network attached Windows box:
   - The operating system should be Microsoft Server 2003 or higher.
   - At least Dual Core 3.6 MHz CPU.
-  - At least 1 gigabytes of storage.
-    - Microsoft Access is limited to a 1 gigabyte database size and ProjectKi is a
-      potential Access alternative, so requires a 1 gigabyte minimum to match.
-** Design and Implementation Contraints
+  - At least 1 gigabyte of storage.
+    - Microsoft Access is limited to a 1 gigabyte database size and ProjectKi is a potential Access alternative, so requires a 1 gigabyte minimum to match.
+  - Local installation of Microsoft SQL Server
+** Design and Implementation Constraints
+*** Developer Inexperience
+    The largest constraint on this project is the general inexperience of the development team.
+*** Time Limitation
+    The second largest constraint on the project is designing to fit development time within the later half of one semester.
+*** Programming Language Constraint
+    The class project requires ProjectKi to be a website built on HTML, CSS, and JavaScript.
 ** User Documentation
+The user documentation for ProjectKi consists of three parts:
+  - The primary documentation will be the landing page of the website, which will have an embedded mini-guide on how to use the system.
+  - The secondary documentation will be tooltips populated for every pushbutton and static page element.
+  - The third and most detailed documentation will be the software user manual. This manual will provide screenshots of each page and an enumerated description pointing to each element on that page. The manual will also detail the valid values for each user entry and a description for each system error that can occur.
 ** Assumptions and Dependencies
-
+*** Assumptions
+- Each BOM can only select one price per unique part, even with multiple of the same part.
+- Each unique part is made by only one manufacturer.
+- Manufacturers do not duplicate their own part numbers.
+- Each supplier has only one relevant contact and address.
+- Each purchase order is generated from only one BOM.
+- Each purchase order is for only one supplier.
+- Each supplier requires one purchase order per BOM.
+*** Dependencies
+- Users have web-browsers capable of interacting with javascript, html, and css.
+- Microsoft SQL Server will host a database to interact with.
 * Specific Requirements
 
 ** External Interface Requirements
-** User Interfaces
-** Hardware Interfaces
-** Software Interfaces
-** Communications Interfaces
+*** User Interfaces
+    The user interface for ProjectKi consists of four pages. At the top of each of these pages will be navigation buttons to the other three.
+**** Landing Page
+     The landing page will present a minitutorial in a central window with buttons on either side for scrolling through the tutorial graphics.
+**** Suppliers Entry
+     The suppliers entry page will be split into two halves. The top half will display the currently selected supplier, or an empty entry, with the following editable fields either populated or blank:
+     - Supplier ID
+     - Supplier Name
+     - Supplier Abbreviation
+     - Account Number
+     - Contact Name
+     - Contact Title
+     - Address
+     - City
+     - State
+     - Postal Code
+     - Phone Number
+     - Notes
+     Below the editable fields, there will be pushbuttons for Accepting, Cancelling, Previous Entry, Next Entry, and New Entry. Lastly, the bottom half of the page will display a sortable tabulated list of existing supplier entries which can be selected from. When an entry is selected, it is pulled up into the top half of the screen for editing.
+**** Parts Entry
+     The parts entry page will be very similar to the suppliers entry page. The top half will display the currently selected part, or an empty entry. For each part, the editable fields are:
+     - Part ID
+     - Part Number
+     - Description
+     - Manufacturer
+     - Supplier and Supplier Unit Price
+     Each part can have multiple suppliers, so additional Supplier and Price fields are generated as needed. Again below the editable fields there will be pushbuttons for Accepting, Cancelling, Previous Entry, Next Entry, and New Entry. The bottome half will display a sortable tabulated list of existing part entries, which can also be selected from for editing.
+**** Project Page
+     The project page is where parts are collected into a Bill of Materials. The page initially starts blank with a prompt and buttons for either selecting an exisiting BOM project or starting a new one. After making a selection, either an existing BOM is populated on screen or a blank one is started. Once a project is open, the page will have three main sections. At the top section are editable data fields that apply to the project as a whole:
+     - BOM ID
+     - Job Number
+     - Date
+     - Customer Name
+     - Project Name
+     - BOM Description
+     Also in the top section will be two pushbuttons, one for generating a BOM document and one for generating a Purchase Order document.
+
+     The second section of the project page is an interactive area for adding parts to the BOM. The first field is a searchable drop-down selection from the parts list, ordered by manufacturer and then by part number. After selecting a part, the second field will show a drop-down selection of possible suppliers for that part. After selecting both the part number and then supplier, a final field will display a quantity to add, next to a pushbutton to accept the entry.
+
+     The third section of the project page is a sortable list of all parts already added to the BOM. Next to each part is a button for deleting the part and a button for editing the part, which will cause its details to automatically populate the second page section for adding parts. Each part entry on the BOM page will show its associated:
+     - Part Number
+     - Part Description
+     - Manufacturer
+     - Supplier
+     - Quantity
+     - Unit Price
+     - Line Total
+*** Hardware Interfaces
+    The anticipated hardware for using ProjectKi is just a basic monitor, keyboard, and mouse peripheral setup on any website-capable computer. Even though many other devices including cell phones and tablets can access an internet browser to reach the ProjectKi webpage, the data-entry nature of ProjectKi strongly suggests using a keyboard. A separate mobile-ready webpage will not be created. The ProjectKi website application and database will be on the same network as user-accessible computers.
+*** Software Interfaces
+    The ProjectKi program will need to interface with a database for storing project data. Interaction with the database will be with SQL commands, specifically transact-SQL for Microsoft SQL Server. Web-browsers used to access ProjectKi will probably be limited to Windows installations of either Edge, Chrome, or Firefox.
+*** Communications Interfaces
+    Because ProjectKi is intented to be contained within a trusted network, basic Ethernet/IP connectivity over HTTP to a static IP address should suffice.
 ** Functional Requirements
 ** Behavior Requirements
 *** Use Case View
@@ -63,10 +120,42 @@
 * Other Non-Functional Requirements
 
 ** Performance Requirements
+- ProjectKi would ideally be a drop-in replacement for similar custom Microsoft Access applications, and because Access is just a local application and database, it feels very snappy relative to internet webpages.
+- Local hosting of the ProjectKi database server will allow for nearly-as-fast interaction.
 ** Safety And Security Requirements
+*** Safety
+- ProjectKi does not carry implications for possible loss, damage, or harm.
+- However, it would be best administrative practice to automatically save a backup of the database every work day and save a copy of any issued BOMs and POs in order to maintain a record.
+*** Security
+- Once populated, the ProjectKi database will likely contain sensitive business information, ranging from privately negotiated vendor prices to engineering designs protected by Non-Disclosure Agreements.
+- For the purposes of demo, ProjectKi will be hosted on a public domain website, but end-user installation of the software is expected to be restricted to an existing local subnet whose security is already maintained by an administrator and hidden behind firewall.
+- The software itself does not provide additional security measures.
 ** Software Quality Attributes
+*** Lean Design
+ProjectKi consists of only a handful of pages, but each page should have links to every other page, and those links should be supplemented with a paired shortcut key.
+*** Flexible Quantities and Prices
+- All quantities fields need to able to handle fractional amounts (for example 3.25 is a valid number to specify quantity of 10' cable lengths)
+- All prices fields need to be able to handle fractional pennies (for example $0.015 is a valid price for individual terminal separators)
+*** Printable Deliverables
+- Generated PO's and BOM's must format to print nicely on 8.5" by 11" standard printer paper as well as 11" by 17" drawing paper.
 
 * Appendix A - Data Dictionary
+
+SRS - Software Requirement Specification, formal name for this document.
+Part - Any uniquely identifiable material defined by a part number, description, and manufacturer.
+BOM - Bill of Materials, a list of all materials (parts) needed to manufacture an engineering product.
+PO - Purchase Order, an official document communicating a buyer's requested materials, quantities, and negotiated prices to a supplier.
+Job - An umbrella term for any task or project that has a need for BOMs and POs.
+Supplier - An organization from which materials can be bought.
+Manufacturer - An organization that creates original materials to be distributed by suppliers.
+SQL - Structured Query Language, a programming language for interacting with relational databases.
+Microsoft Access - A tool used to create business applications similar to ProjectKi.
+Microsoft Windows - A family of operating systems commonly used in engineering-field business.
+GB - Gigabyte, a measurement of storage space, equivalent to 1,000,000,000 bytes.
+MZH - Megahertz, a measurement of the CPU clock frequency
+CPU - Central Processor Unit, performs the calculations used by a computer program.
+Unit Price - The cost of a single one material.
+Line Total - The amount of money found by multiplying an item's unit price by its requested quantity.
 
 * Appendix B - Group Log
 
