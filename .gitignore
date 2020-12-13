@@ -1,0 +1,6 @@
+
+.gitignore.txt
+/rootfolder/semantic/
+/rootfolder/node_modules
+/.idea/
+*.iml
