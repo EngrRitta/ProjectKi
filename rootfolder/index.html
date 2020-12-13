@@ -4,14 +4,32 @@
   <meta charset="UTF-8">
   <title>Project Ki</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+  <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+  <script src="semantic/dist/semantic.min.js"></script>
 </head>
 <body>
 <section>
-<h1 title="Unlock the Ki to your project!" >Project Ki</h1>
-<h2>Welcome to Project Ki, the key to your projects. Project Ki is a tool for generating Bills of Materials(BOM) and Purchase
-Orders(PO) for your engineering projects from a database of parts and suppliers. First populate the database with your company's
-list of parts commonly purchased, their suppliers, and associated prices. Next select the necessary parts per project. Finally
-generate a BOM and POs for your project.</h2>
+  <div class = "index-intro" id="index-intro">
+    <h1 title="Unlock the Ki to your project!" >Project Ki</h1>
+    <h2>Welcome to Project Ki, the key to your projects. Project Ki is a tool for generating Bills of Materials(BOM) and Purchase
+    Orders(PO) for your engineering projects from a database of parts and suppliers. First populate the database with your company's
+    list of parts commonly purchased, their suppliers, and associated prices. Next select the necessary parts per project. Finally
+    generate a BOM and POs for your project.</h2>
+  </div>
+</section>
+<section>
+  <div class="two ui buttons">
+    <button class="huge ui orange button">New Project</button>
+    <button class="huge ui orange button">Open Project</button>
+  </div>
+  <div class="two ui buttons">
+    <button class="huge ui orange button">Edit Parts</button>
+    <button class="huge ui orange button">Edit Suppliers</button>
+  </div>
 </section>
 </body>
 </html>
