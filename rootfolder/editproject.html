@@ -7,15 +7,41 @@
 </head>
 <body>
 <form action="processForm.php">
-  Project ID: <input type="text" name="projectID"><br>
-  Project Name: <input type="text" name="projectName"><br>
+  <div class = "ui large form">
+    <div class = "three fields">
+    <div class="field">
+     <label>Project ID:</label> <input type="text" name="projectID"><br>
+    </div>
+    <div class="field">
+      <label>Project Name:</label> <input type="text" name="projectName"><br>
+    </div>
+      <div class="field">
+        <label>Date:</label> <input type="date" name="date"><br>
+      </div>
+    </div>
+  </div>
+  <div class = "ui large form">
+    <div class = "three fields">
+      <div class="field">
+        <label>Job Number:</label> <input type="text" name="jobNumber"><br>
+      </div>
+      <div class="field">
+        <label>Customer Name:</label> <input type="text" name="customerName"><br>
+      </div>
+      <div class="field">
+        <label>BOM Description:</label> <input type="text" name="bomDescription"><br>
+      </div>
+    </div>
+  <!--
   Date: <input type="date" name="date"><br>
   Job Number: <input type="text" name="jobNumber"><br>
   Customer Name: <input type="text" name="customerName"><br>
-  BOM Description: <input type="text" name="bomDescription"><br>
+  BOM Description: <input type="text" name="bomDescription"><br>-->
 
 
-  <button type="submit">OK</button>
+  <button class= "ui fluid large orange button" type="submit">OK</button>
+
+    <a href="http://127.0.0.1"><button class="medium fluid ui orange button" id="newProjectButton">Return to Index</button></a>
 </form>
 </body>
 </html>

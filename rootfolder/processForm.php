@@ -6,7 +6,7 @@
   $jobNumber = $_GET['jobNumber'];
   $customerName = addslashes($_GET['customerName']);
   $bomDescription = addslashes($_GET['bomDescription']);
-  echo "Your project is " . $projectID . " Bye! <br>";
+
 
 
 $servername = "localhost";
@@ -21,12 +21,30 @@ $connection = mysqli_connect($servername, $username, $password, $database_name);
 if (!$connection) {
     die("Connection failed: " . mysqli_connect_error());
 }
-echo "Connected successfully";
+//echo "Connected successfully";
 
 $sql_statement= "INSERT INTO `projecttable` (`id`, `projectID`, `projectName`, `date`, `jobNumber`, `customerName`, `bomDescription`) VALUES(NULL, '$projectID', '$projectName', '$date', '$jobNumber', '$customerName', '$bomDescription')";
 
 if (mysqli_query($connection, $sql_statement)) {
-    echo "New record created successfully";
+    echo "<div class = 'ui message'> <div class='header'>" . "New project created successfully!" . "</div></div>";
 } else {
     echo "Error: " . $sql_statement . "<br>" . mysqli_error($connection);
 }
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+</head>
+<body>
+    <div class = "ui message">
+        <div class="header">
+            <?php
+            echo "Your project ID is " . $projectID . " Please open it from the projects menu. Bye! <br>";
+            ?>
+        </div>
+    </div>
+    <a href="projectlist.php"><button class="medium fluid ui orange button" id="newProjectButton">Go to Projects Menu</button></a>
+    <a href="http://127.0.0.1"><button class="medium fluid ui orange button" id="newProjectButton">Return to Index</button></a>
+</body>
