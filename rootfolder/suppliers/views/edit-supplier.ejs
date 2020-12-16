@@ -4,7 +4,7 @@
         <p class="text-center text-danger"><%= message %></p>
     <% } %>
 
-    <% if (part) { %>
+    <% if (supplier) { %>
             <form class="add-supplier-form" action="" method="post" enctype="multipart/form-data">
                 <div class="form-row">
                     <div class="form-group col-md-4">
@@ -14,7 +14,7 @@
                         <input type="text" class="form-control" name="abbreviation" id="abbreviation" placeholder="Abbreviation" required>
                     </div>
                     <div class="form-group col-md-4">
-                        <input type="number" class="form-control" step="any" name="account" id="account" placeholder="Account Number" required>
+                        <input type="text" class="form-control" name="account" id="account" placeholder="Account Number" required>
                     </div>
                 </div>
                 <div class="form-row">
@@ -31,7 +31,7 @@
                 <button type="submit" class="btn btn-primary float-right">Add Supplier</button>
             </form>
     <% } else { %>
-        <p class="text-center">Part Not Found. Go <a href="/add">here</a> to add suppliers.</p>
+        <p class="text-center">Supplier Not Found. Go <a href="/add">here</a> to add suppliers.</p>
     <% } %>
 </div>
 </div>
