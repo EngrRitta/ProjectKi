@@ -14,7 +14,7 @@ const port = 5001;
 const db = mysql.createConnection ({
     host: 'localhost',
     user: 'root',
-    password: '',
+    password: 'secret',
     database: 'kidb'
 });
 
