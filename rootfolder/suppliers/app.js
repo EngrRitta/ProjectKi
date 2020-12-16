@@ -6,8 +6,8 @@ const path = require('path');
 const app = express();
 
 const {getHomePage} = require('./routes/index');
-const {addPartPage, addPart, deletePart, editPart, editPartPage} = require('./routes/parts');
-const port = 5000;
+const {addSupplierPage, addSupplier, deleteSupplier, editSupplier, editSupplierPage} = require('./routes/suppliers');
+const port = 5001;
 
 // create connection to database
 // the mysql.createConnection function takes in a configuration object which contains host, user, password and the database name.
@@ -39,11 +39,11 @@ app.use(fileUpload()); // configure fileupload
 // routes for the app
 
 app.get('/', getHomePage);
-app.get('/add', addPartPage);
-app.get('/edit/:id', editPartPage);
-app.get('/delete/:id', deletePart);
-app.post('/add', addPart);
-app.post('/edit/:id', editPart);
+app.get('/add', addSupplierPage);
+app.get('/edit/:id', editSupplierPage);
+app.get('/delete/:id', deleteSupplier);
+app.post('/add', addSupplier);
+app.post('/edit/:id', editSupplier);
 
 
 // set the app to listen on the port
