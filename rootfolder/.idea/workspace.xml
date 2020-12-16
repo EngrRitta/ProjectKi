@@ -56,7 +56,20 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -91,9 +104,13 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1002" y="517" key="#com.intellij.fileTypes.FileTypeChooser/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1607735417742" />
-    <state x="974" y="334" key="search.everywhere.popup" timestamp="1608071759102">
+    <state x="812" y="360" key="SettingsEditor" timestamp="1608095105603">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="974" y="334" key="search.everywhere.popup/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1608071759102" />
+    <state x="812" y="360" key="SettingsEditor/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1608095105603" />
+    <state x="974" y="334" width="672" height="678" key="search.everywhere.popup" timestamp="1608094647736">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="974" y="334" width="672" height="678" key="search.everywhere.popup/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1608094647736" />
   </component>
 </project>
