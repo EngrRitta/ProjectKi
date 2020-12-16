@@ -32,6 +32,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -104,6 +105,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1002" y="517" key="#com.intellij.fileTypes.FileTypeChooser/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1607735417742" />
+    <state x="1145" y="639" key="NewPhpFileDialog" timestamp="1608109088218">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1145" y="639" key="NewPhpFileDialog/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1608109088218" />
     <state x="812" y="360" key="SettingsEditor" timestamp="1608095105603">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

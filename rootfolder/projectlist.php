@@ -7,6 +7,7 @@
 </head>
 <body>
   <p class="pinstructions">Select the project you wish to open.</p>
+  <form action="openProject.php">
   <table class="ui orange compact celled definition table">
     <thead class ="full width">
     <tr>
@@ -42,7 +43,8 @@
         while ($row = mysqli_fetch_assoc($result)) {
 
           echo "<tr>";
-          echo "<td class='collapsing'>". "<div class='ui radio checkbox'>" . "<input type  ='radio' name='radio'>" . "<label>" . "</label>" . "</div>" . "</td>";
+          $currentID=$row['projectID'];
+          echo "<td class='collapsing'>". "<div class='ui radio checkbox'>" . "<input type  ='radio' name='radioChoice' value= $currentID>" . "<label>" . "</label>" . "</div>" . "</td>";
           echo "<td>". $row['projectID'] . "</td>";
           echo "<td>" . $row['projectName'] . "</td>";
           echo "<td>" . $row['date'] . "</td>";
@@ -52,18 +54,20 @@
           echo "</tr>";
         }
       }
-    ?></tbody>
+    ?>
+        </tbody>
       <tfoot class="full-width">
       <tr>
         <th></th>
         <th colspan="7">
-          <div class="ui large orange button">
-            <i class="user icon"></i> Open Project
-          </div>
+          <button class="ui large orange button">
+             Open Project
+          </button>
 
         </th>
       </tr>
       </tfoot>
+  </form>
   </table>
   <a href="http://127.0.0.1"><button class="medium fluid ui orange button" id="newProjectButton">Return to Index</button></a>
 </body>
