@@ -11,7 +11,7 @@ Status:The project is in implementation stage. We have started implementing the 
 Required:
 
 xxamp installation for database implementation, xxamp comes with phpmyadmin, which is also required. 
-Xxamp can be downloaded for installation here:
+Xampp can be downloaded for installation here:
 https://www.apachefriends.org/download.html
 
 This project uses Semantic UI, which determines the styling of the page, this isn't necessary for funtionality but the page will look different based on whether or not this is installed.
