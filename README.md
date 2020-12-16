@@ -10,7 +10,7 @@ Status:The project is in implementation stage. We have started implementing the 
 
 Required:
 
-xxamp installation for database implementation, xxamp comes with phpmyadmin, which is also required. 
+xampp installation for database implementation, xampp comes with phpmyadmin, which is also required. 
 Xampp can be downloaded for installation here:
 https://www.apachefriends.org/download.html
 
@@ -60,6 +60,6 @@ Password:secret
 
 This can be set on database side. If user wishes to use a different password, this can also be changed within the source files whenever a connection is made.
 
-Once xxamp is set up, and MySQL and Apache are running, the following command needs to be executed inside the suppliers and inside the parts folders to connect to the database:
+Once xampp is set up, and MySQL and Apache are running, the following command needs to be executed inside the suppliers and inside the parts folders to connect to the database:
 nodemon app.js
 
