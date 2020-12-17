@@ -1,3 +1,5 @@
+
+
 <?php
   //print_r($_GET);
   $projectID = $_GET['projectID'];
@@ -38,6 +40,8 @@ if (mysqli_query($connection, $sql_statement)) {
     <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
 </head>
 <body>
+<a href="http://127.0.0.1"><button class="medium fluid ui orange button" id="newProjectButton">Return to Index</button></a>
+<a href="projectlist.php"><button class="medium fluid ui orange button" id="newProjectButton">Go to Projects Menu</button></a>
     <div class = "ui message">
         <div class="header">
             <?php
@@ -45,6 +49,5 @@ if (mysqli_query($connection, $sql_statement)) {
             ?>
         </div>
     </div>
-    <a href="projectlist.php"><button class="medium fluid ui orange button" id="newProjectButton">Go to Projects Menu</button></a>
-    <a href="http://127.0.0.1"><button class="medium fluid ui orange button" id="newProjectButton">Return to Index</button></a>
 </body>
+</html>
