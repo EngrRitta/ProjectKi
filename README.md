@@ -16,7 +16,12 @@ https://www.apachefriends.org/download.html
 
 This project uses Semantic UI, which determines the styling of the page, this isn't necessary for funtionality but the page will look different based on whether or not this is installed.
 
-Also requires: (which can be installed via npm)
+The rest of the installation can be easily done by following the tutorial here:
+https://dev.to/achowba/build-a-simple-app-using-node-js-and-mysql-19me
+
+Only the setup and installation instructions should be followed, not the creation of the actual project shown in the tutorial.
+
+Otherwise, it requires: (which can be installed via npm)
 Node.js
 Express.js
 Express-fileupload
