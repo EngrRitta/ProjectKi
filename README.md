@@ -16,6 +16,19 @@ https://www.apachefriends.org/download.html
 
 This project uses Semantic UI, which determines the styling of the page, this isn't necessary for funtionality but the page will look different based on whether or not this is installed.
 
+Also requires: (which can be installed via npm)
+Node.js
+Express.js
+Express-fileupload
+body-parser
+mysql
+ejs
+rew-flash
+(npm install express express-fileupload body-parser mysql ejs req-flash --save)
+nodemon
+(npm install nodemon -g)
+
+
 The database tables that need to be created should be called: projecttables, parts, suppliers. This can be done inside of the phpMyAdmin console using the following commands:
 CREATE DATABASE kiDB;
 CREATE TABLE IF NOT EXISTS parts (
